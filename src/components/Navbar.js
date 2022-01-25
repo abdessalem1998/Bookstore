@@ -2,21 +2,20 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-
   const links = [
-      {
-        id: 1,
-        path: '/',
-        text: 'Books',
-      },
-      {
-        id: 2,
-        path: '/categories',
-        text: 'Categories',
-      },
-    ];
+    {
+      id: 1,
+      path: '/',
+      text: 'Books',
+    },
+    {
+      id: 2,
+      path: '/categories',
+      text: 'Categories',
+    },
+  ];
 
-  return(
+  return (
     <header>
       <nav>
         <h2>Bookstore v1.0</h2>
@@ -31,7 +30,7 @@ const Navbar = () => {
         </ul>
       </nav>
     </header>
-)
+  );
 };
 
 export default Navbar;

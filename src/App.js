@@ -8,12 +8,12 @@ function App() {
     <div className="App">
       <Navbar />
       <Switch>
-      <Route exact path="/">
-      <Books />
-      </Route>
-      <Route exact path="/categories">
-      <Categories />
-      </Route>
+        <Route exact path="/">
+          <Books />
+        </Route>
+        <Route exact path="/categories">
+          <Categories />
+        </Route>
       </Switch>
     </div>
   );
