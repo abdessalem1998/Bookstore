@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math magicians  React web app
+# Bookstore React/Redux  web app
 
 > The Bookstore is a SPA website allows you to:
 
