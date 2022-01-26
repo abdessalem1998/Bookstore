@@ -5,6 +5,8 @@ import { addBook } from '../../redux/books/books';
 import { v4 as uuidv4 } from 'uuid';
 
 const AddBook = () => {
+  const dispatch = useDispatch();
+
   const [author, setAuthor] = useState('');
   const [title, setTitle] = useState('');
 
@@ -13,6 +15,8 @@ const AddBook = () => {
     dispatch(addBook({
       id: uuidv4(), title, author,
     }));
+    setTitle('');
+    setAuthor('');
   };
 
   return (
