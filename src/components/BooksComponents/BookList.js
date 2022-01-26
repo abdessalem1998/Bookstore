@@ -14,6 +14,7 @@ const BookList = () => {
           return (
             <BookItem
               key={id}
+              id={id}
               title={title}
               author={author}
             />
