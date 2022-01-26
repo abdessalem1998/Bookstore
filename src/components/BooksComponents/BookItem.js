@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
@@ -10,7 +9,7 @@ const BookItem = (book) => {
     dispatch(removeBook(id));
   };
   return (
-    <div id={id}>
+    <div>
       <h3>{title}</h3>
       <p>{author}</p>
       <button type="button" onClick={removeHandler}>Delete</button>
