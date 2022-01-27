@@ -4,14 +4,14 @@ import { removeBook } from '../../redux/books/books';
 
 const BookItem = (book) => {
   const dispatch = useDispatch();
-  const { id, title, author } = book;
+  const { id, title, category } = book;
   const removeHandler = () => {
     dispatch(removeBook(id));
   };
   return (
     <div>
       <h3>{title}</h3>
-      <p>{author}</p>
+      <p>{category}</p>
       <button type="button" onClick={removeHandler}>Delete</button>
     </div>
   );

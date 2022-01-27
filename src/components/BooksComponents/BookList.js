@@ -35,13 +35,13 @@ const BookList = () => {
       <h2>Books list</h2>
       {
         bookArray.map((book) => {
-          const { id, title, author } = book;
+          const { id, title, category } = book;
           return (
             <BookItem
               key={id}
               id={id}
               title={title}
-              author={author}
+              category={category}
             />
           );
         })
