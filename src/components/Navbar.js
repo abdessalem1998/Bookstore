@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { ImUser } from 'react-icons/im';
+import navStyle from './Navbar.module.css';
 
 const Navbar = () => {
   const links = [
@@ -16,9 +18,9 @@ const Navbar = () => {
   ];
 
   return (
-    <header>
+    <header className={navStyle.header}>
       <nav>
-        <h2>Bookstore v1.0</h2>
+        <h2>Bookstore CMS</h2>
         <ul>
           {links.map((link) => (
             <li key={link.id}>
@@ -29,6 +31,9 @@ const Navbar = () => {
           ))}
         </ul>
       </nav>
+      <div className={navStyle.header}>
+        <ImUser className={navStyle.icon} />
+      </div>
     </header>
   );
 };

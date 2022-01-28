@@ -1,0 +1,47 @@
+.header {
+  height: 6rem;
+  background-color: #fff;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.header a {
+  color: #121212;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+nav h2 {
+  color: #0290ff;
+  font-size: 1.875rem;
+  font-weight: 900;
+}
+
+.header div {
+  color: #0290ff;
+  font-size: 1.875rem;
+}
+
+.icon {
+  border-radius: 50%;
+  border: 5px solid #fafafa;
+}
