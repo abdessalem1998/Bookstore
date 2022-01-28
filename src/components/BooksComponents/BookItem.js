@@ -1,6 +1,8 @@
 import React from 'react';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
+import bookStyle from './BookItem.module.css';
 
 const BookItem = (book) => {
   const dispatch = useDispatch();
@@ -24,10 +26,38 @@ const BookItem = (book) => {
     });
   };
   return (
-    <div>
-      <h3>{title}</h3>
-      <p>{category}</p>
-      <button type="button" onClick={removeHandler}>Delete</button>
+    <div className={bookStyle.itemContainer}>
+      <div className={bookStyle.book}>
+        <p>{category}</p>
+        <h3>{title}</h3>
+        <span>Anonymous</span>
+        <div>
+          <button type="button">Comments</button>
+          <span className={bookStyle.separation} />
+          <button onClick={removeHandler} type="button">Remove</button>
+          <span className={bookStyle.separation} />
+          <button type="button">Edit</button>
+        </div>
+      </div>
+      <div className={bookStyle.progress}>
+        <div style={{ width: '4.25rem', height: '4.25rem' }}>
+          <CircularProgressbar value={66} styles={buildStyles({ pathColor: '#0290ff' })} />
+        </div>
+        <div className={bookStyle.progressText}>
+          <p>66%</p>
+          <span>Completed</span>
+        </div>
+      </div>
+      <span className={bookStyle.separation2} />
+      <div className={bookStyle.chapter}>
+        <p>CURRENT CHAPTER</p>
+        <span>
+          Chapter
+        </span>
+        <div>
+          <button className={bookStyle.progressBtn} type="button">UPDATE PROGRESS</button>
+        </div>
+      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../../redux/books/books';
+import addStyle from './AddBook.module.css';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -41,12 +42,12 @@ const AddBook = () => {
   };
 
   return (
-    <div>
-      <h2>Add New Book</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" required />
-        <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Author" required />
-        <button type="submit">Add Book</button>
+    <div className={addStyle.container}>
+      <h2 className={addStyle.titleStyle}>Add New Book</h2>
+      <form className={addStyle.formStyle} onSubmit={handleSubmit}>
+        <input type="text" className={addStyle.inputStyles} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" required />
+        <input type="text" className={addStyle.inputStyles} value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Author" required />
+        <button className={addStyle.addbtn} type="submit">Add Book</button>
       </form>
     </div>
   );

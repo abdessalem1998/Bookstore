@@ -32,7 +32,6 @@ const BookList = () => {
 
   return (
     <div>
-      <h2>Books list</h2>
       {
         bookArray.map((book) => {
           const { id, title, category } = book;
